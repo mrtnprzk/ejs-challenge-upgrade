@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+<h1>Home</h1>
+<p><%= homeParagraph %></p>
+
+<% composePosts.forEach((element) => { %>
+    <h2><%= element.title %></h2>
+    <p><%= element.post.substring(0, 100) + "... " %><a href="/post/<%=element.id%>">Read More.</a></p>
+<% }); %>
+
+<%- include('partials/footer') %>
